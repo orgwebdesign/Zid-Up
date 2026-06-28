@@ -46,7 +46,6 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-8">
           <Link href="/services" className="text-text-soft hover:text-white transition-colors text-sm font-medium">{t("nav.services")}</Link>
           <Link href="/how-it-works" className="text-text-soft hover:text-white transition-colors text-sm font-medium">{t("nav.howItWorks")}</Link>
-          <Link href="/api-docs" className="text-text-soft hover:text-white transition-colors text-sm font-medium">{t("nav.api")}</Link>
           <Link href="/blog" className="text-text-soft hover:text-white transition-colors text-sm font-medium">{t("nav.blog")}</Link>
           <Link href="/contact" className="text-text-soft hover:text-white transition-colors text-sm font-medium">{t("nav.contact")}</Link>
         </nav>
@@ -89,7 +88,6 @@ export function Navbar() {
           <nav className="flex flex-col gap-4 text-lg">
             <Link href="/services" className="text-text-main hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>{t("nav.services")}</Link>
             <Link href="/how-it-works" className="text-text-main hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>{t("nav.howItWorks")}</Link>
-            <Link href="/api-docs" className="text-text-main hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>{t("nav.api")}</Link>
             <Link href="/blog" className="text-text-main hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>{t("nav.blog")}</Link>
             <Link href="/contact" className="text-text-main hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>{t("nav.contact")}</Link>
           </nav>
