@@ -1,0 +1,134 @@
+{
+  "instagram": {
+    "Followers": {
+      "costPrice": 40.06,
+      "sellingPrice": 79,
+      "name": "Instagram Followers [High Quality]",
+      "speed": "Instant",
+      "guarantee": "30 Days"
+    },
+    "Likes": {
+      "costPrice": 33.6,
+      "sellingPrice": 69,
+      "name": "Instagram Likes [Real Users]",
+      "speed": "Fast",
+      "guarantee": "30 Days"
+    },
+    "Views": {
+      "costPrice": 0.056,
+      "sellingPrice": 15,
+      "name": "Instagram Reel Views",
+      "speed": "Super Fast",
+      "guarantee": "No Refill",
+      "baseQuantity": 1000
+    },
+    "Comments": {
+      "costPrice": 21,
+      "sellingPrice": 89,
+      "name": "Instagram Custom Comments",
+      "speed": "Fast",
+      "guarantee": "no Refill",
+      "baseQuantity": 1000
+    }
+  },
+  "tiktok": {
+    "Followers": {
+      "costPrice": 16.8,
+      "sellingPrice": 35,
+      "name": "TikTok Followers [HQ]",
+      "speed": "Fast",
+      "guarantee": "30 Days",
+      "baseQuantity": 1000
+    },
+    "Likes": {
+      "costPrice": 1.568,
+      "sellingPrice": 20,
+      "name": "TikTok Likes",
+      "speed": "Fast",
+      "guarantee": "60 Days"
+    },
+    "Views": {
+      "costPrice": 0.062,
+      "sellingPrice": 15,
+      "name": "TikTok Views [Viral]",
+      "speed": "Instant",
+      "guarantee": "30 Days",
+      "baseQuantity": 1000
+    },
+    "Comments": {
+      "costPrice": 1.68,
+      "sellingPrice": 50,
+      "name": "TikTok Verified Comments",
+      "speed": "Fast",
+      "guarantee": "30 Days"
+    }
+  },
+  "youtube": {
+    "Subscribers": {
+      "costPrice": 420,
+      "sellingPrice": 480,
+      "name": "YouTube Subscribers [Non-Drop]",
+      "speed": "Slow/Safe",
+      "guarantee": "Lifetime Refill",
+      "baseQuantity": 1000
+    },
+    "Likes": {
+      "costPrice": 67.2,
+      "sellingPrice": 85,
+      "name": "YouTube Likes",
+      "speed": "Fast",
+      "guarantee": "Lifetime"
+    },
+    "Views": {
+      "costPrice": 26.4,
+      "sellingPrice": 45,
+      "name": "YouTube Views [High Retention]",
+      "speed": "Fast",
+      "guarantee": "Lifetime"
+    },
+    "Comments": {
+      "costPrice": 24.605,
+      "sellingPrice": 52,
+      "name": "YouTube Custom Comments",
+      "speed": "Slow/Safe",
+      "guarantee": "Lifetime"
+    }
+  },
+  "facebook": {
+    "Followers": {
+      "costPrice": 9.8,
+      "sellingPrice": 59,
+      "name": "Facebook Page Followers",
+      "speed": "Fast",
+      "guarantee": "lifetime"
+    },
+    "Views": {
+      "costPrice": 0.938,
+      "sellingPrice": 15,
+      "name": "Facebook Video Views",
+      "speed": "Fast",
+      "guarantee": "30 Days"
+    },
+    "Comments": {
+      "costPrice": 21,
+      "sellingPrice": 69,
+      "name": "Facebook Real Comments",
+      "speed": "Fast",
+      "guarantee": "30 Days"
+    },
+    "PostLikes": {
+      "costPrice": 11.2,
+      "sellingPrice": 33,
+      "name": "Facebook Post/Photo Likes",
+      "speed": "Instant",
+      "guarantee": "lifetime"
+    },
+    "PageLikes": {
+      "costPrice": 12.6,
+      "sellingPrice": 44,
+      "name": "Facebook Page Likes",
+      "speed": "Instant",
+      "guarantee": "lifetime"
+    }
+  }
+}
