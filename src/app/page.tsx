@@ -3,11 +3,13 @@ import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PlatformStrip } from "@/components/sections/PlatformStrip";
 import { WelcomeStory } from "@/components/sections/WelcomeStory";
-import { RealClientResults } from "@/components/sections/RealClientResults";
+import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
+import { LiveOrderTracking } from "@/components/sections/LiveOrderTracking";
 import { Features } from "@/components/sections/Features";
 import { WhatsAppCTA } from "@/components/sections/WhatsAppCTA";
 import { Statistics } from "@/components/sections/Statistics";
 import { PricingDashboard } from "@/components/sections/PricingDashboard";
+import { LiveSocialProof } from "@/components/sections/LiveSocialProof";
 import { ServicesPreview } from "@/components/sections/ServicesPreview";
 import { FAQ } from "@/components/sections/FAQ";
 import { BlogPreview } from "@/components/sections/BlogPreview";
@@ -37,8 +39,10 @@ export default function Home() {
         <HeroSection />
         <PlatformStrip />
         <PricingDashboard pricingData={pricingData} />
+        <LiveSocialProof />
         <Features />
-        <RealClientResults />
+        <TestimonialsCarousel />
+        <LiveOrderTracking />
         <Statistics />
         <ServicesPreview pricingData={pricingData} />
         <FAQ />
