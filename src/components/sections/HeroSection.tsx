@@ -94,7 +94,7 @@ export function HeroSection() {
           </div>
 
           {/* Right Content - Social Media Hero SVG */}
-          <div className="relative w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] mx-auto hero-image z-10 flex justify-center items-center scale-100 sm:scale-110 lg:scale-[1.3] xl:scale-[1.5] ltr:lg:translate-x-10 rtl:lg:-translate-x-10 ltr:xl:translate-x-20 rtl:xl:-translate-x-20">
+          <div className="relative w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[500px] mx-auto hero-image z-10 flex justify-center items-center scale-100 sm:scale-110 lg:scale-[1.3] xl:scale-[1.5] ltr:lg:translate-x-10 rtl:lg:-translate-x-10 ltr:xl:translate-x-20 rtl:xl:-translate-x-20">
             <SocialMediaHero />
           </div>
           
