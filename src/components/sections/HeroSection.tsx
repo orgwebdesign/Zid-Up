@@ -5,6 +5,7 @@ import gsap from "gsap";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { SocialMediaHero } from "@/components/ui/SocialMediaHero";
 
 import { CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -22,7 +23,7 @@ export function HeroSection() {
         .from(".hero-trust", { opacity: 0, y: 20, duration: 0.6 }, "-=0.4")
         .from(".hero-image", { opacity: 0, x: 80, scale: 0.9, rotationY: -15, transformPerspective: 1000, duration: 1.2, ease: "power3.out" }, "-=1");
 
-      gsap.to(".hero-image img", {
+      gsap.to(".hero-image svg", {
         y: -15,
         duration: 3,
         repeat: -1,
@@ -92,24 +93,9 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Content - Hero Image */}
-          <div className="relative w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[1000px] mx-auto hero-image z-10 flex justify-center items-center scale-100 sm:scale-110 lg:scale-[1.6] xl:scale-[1.8] ltr:lg:translate-x-20 rtl:lg:-translate-x-20 ltr:xl:translate-x-32 rtl:xl:-translate-x-32">
-            {/* Magical portal glow to blend the white background */}
-            <div className="absolute inset-0 bg-primary/20 rounded-full blur-[160px] animate-pulse" style={{ animationDuration: '4s' }} />
-            
-            <Image 
-              src="/image/hero.webp" 
-              alt="ZID UP AI Wizard" 
-              width={600}
-              height={600}
-              sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 600px"
-              priority
-              className="w-full h-auto relative z-10 drop-shadow-[0_0_60px_rgba(124,58,237,0.5)]"
-              style={{
-                maskImage: 'radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 48%, rgba(0,0,0,0) 78%)',
-                WebkitMaskImage: 'radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 48%, rgba(0,0,0,0) 78%)'
-              }}
-            />
+          {/* Right Content - Social Media Hero SVG */}
+          <div className="relative w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] mx-auto hero-image z-10 flex justify-center items-center scale-100 sm:scale-110 lg:scale-[1.3] xl:scale-[1.5] ltr:lg:translate-x-10 rtl:lg:-translate-x-10 ltr:xl:translate-x-20 rtl:xl:-translate-x-20">
+            <SocialMediaHero />
           </div>
           
         </div>
