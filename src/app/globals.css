@@ -164,6 +164,8 @@ body {
 [dir="rtl"] {
   direction: rtl;
   text-align: right;
+  --font-heading: var(--font-cairo), "Cairo", sans-serif;
+  --font-body: var(--font-cairo), "Cairo", sans-serif;
 }
 
 [dir="rtl"] .container-custom {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans, Noto_Sans_Arabic } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Noto_Sans_Arabic, Cairo } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
@@ -19,6 +19,12 @@ const notoSansArabic = Noto_Sans_Arabic({
   subsets: ["arabic"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-noto-arabic",
+});
+
+const cairo = Cairo({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-cairo",
 });
 
 export const metadata: Metadata = {
@@ -47,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr" className="antialiased dark scroll-smooth">
-      <body className={`${inter.variable} ${plusJakartaSans.variable} ${notoSansArabic.variable} min-h-screen bg-[var(--background)] text-[var(--text-main)] selection:bg-primary/30 selection:text-white flex flex-col`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${plusJakartaSans.variable} ${notoSansArabic.variable} ${cairo.variable} min-h-screen bg-[var(--background)] text-[var(--text-main)] selection:bg-primary/30 selection:text-white flex flex-col`} suppressHydrationWarning>
         <LanguageProvider>
           {children}
         </LanguageProvider>
