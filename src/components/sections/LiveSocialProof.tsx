@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const names = [
@@ -54,18 +54,11 @@ export function LiveSocialProof() {
   );
 
   return (
-    <>
-      <style>{`
-        @keyframes marquee-slow {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-      `}</style>
     <div className="relative border-t border-white/5 bg-surface-2/80 overflow-hidden py-2.5">
       <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-surface-2/80 to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-surface-2/80 to-transparent z-10 pointer-events-none" />
 
-      <div className="flex gap-8 items-center text-sm" style={{ display: "flex", width: "max-content", animation: "marquee-slow 120s linear infinite" }}>
+      <div className="marquee-slow flex gap-8 items-center text-sm" style={{ width: "max-content" }}>
         {notifications.map((n, i) => (
           <div
             key={i}
@@ -85,6 +78,5 @@ export function LiveSocialProof() {
         ))}
       </div>
     </div>
-    </>
   );
 }

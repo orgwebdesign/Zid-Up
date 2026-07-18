@@ -25,6 +25,7 @@ export function Statistics() {
       ScrollTrigger.create({
         trigger: containerRef.current,
         start: "top 80%",
+        once: true,
         onEnter: () => {
           setHasAnimated(true);
         }

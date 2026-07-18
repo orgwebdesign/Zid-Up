@@ -8,6 +8,14 @@ import { Check, Info, TrendingUp, Users, Heart, Eye, MessageCircle, AlertCircle 
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
 
+type Currency = "MAD" | "EUR" | "USD";
+
+const currencyConfig: Record<Currency, { symbol: string; flag: string; rate: number }> = {
+  MAD: { symbol: "MAD", flag: "🇲🇦", rate: 1 },
+  EUR: { symbol: "€", flag: "🇪🇺", rate: 0.092 },
+  USD: { symbol: "$", flag: "🇺🇸", rate: 0.10 },
+};
+
 const platformConfig: any = {
   Instagram: {
     icon: (
@@ -87,7 +95,15 @@ export function PricingDashboard({ pricingData: dynamicPricing }: PricingDashboa
   const [platform, setPlatform] = useState<PlatformType>("Instagram");
   const [service, setService] = useState<string>("Followers");
   const [quantity, setQuantity] = useState<number>(1000);
+  const [currency, setCurrency] = useState<Currency>("MAD");
   const { t, language } = useLanguage();
+
+  const convertPrice = (priceInMAD: number): string => {
+    const cfg = currencyConfig[currency];
+    const converted = priceInMAD * cfg.rate;
+    if (currency === "MAD") return Math.round(converted).toString();
+    return converted.toFixed(2);
+  };
 
   const currentConfig = platformConfig[platform];
   const dynamicPlatformData = dynamicPricing ? dynamicPricing[String(platform).toLowerCase()] : null;
@@ -126,12 +142,15 @@ export function PricingDashboard({ pricingData: dynamicPricing }: PricingDashboa
   const serviceDisplayName = t(`services.${serviceKey}`);
 
   const platformName = String(platform);
+  const curCfg = currencyConfig[currency];
+  const displayedPrice = convertPrice(finalPrice);
   const fullServiceName = dynamicServiceData?.name || `${platformName} ${serviceDisplayName}`;
+  const currencyLabel = currency === "MAD" ? "MAD" : curCfg.symbol;
   const whatsappMessage = language === "en" 
-    ? `Hello,\nI would like to place an order.\n\nPlatform: ${platformName}\nService: ${fullServiceName}\nQuantity: ${quantity}\nTotal Price: ${finalPrice} MAD\nDelivery: ${deliverySpeed}\nGuarantee: ${guaranteeInfo}\n\nPlease assist me.`
+    ? `Hello,\nI would like to place an order.\n\nPlatform: ${platformName}\nService: ${fullServiceName}\nQuantity: ${quantity}\nTotal Price: ${displayedPrice} ${currencyLabel}\nDelivery: ${deliverySpeed}\nGuarantee: ${guaranteeInfo}\n\nPlease assist me.`
     : language === "fr"
-    ? `Bonjour,\nJe voudrais passer une commande.\n\nPlateforme: ${platformName}\nService: ${fullServiceName}\nQuantité: ${quantity}\nPrix Total: ${finalPrice} MAD\nLivraison: ${deliverySpeed}\nGarantie: ${guaranteeInfo}\n\nMerci de m'aider.`
-    : `مرحباً،\nأود طلب الآتي:\n\nالمنصة: ${platformName}\nالخدمة: ${fullServiceName}\nالكمية: ${quantity}\nالسعر الإجمالي: ${finalPrice} MAD\nالتوصيل: ${deliverySpeed}\nالضمان: ${guaranteeInfo}\n\nالرجاء المساعدة.`;
+    ? `Bonjour,\nJe voudrais passer une commande.\n\nPlateforme: ${platformName}\nService: ${fullServiceName}\nQuantité: ${quantity}\nPrix Total: ${displayedPrice} ${currencyLabel}\nLivraison: ${deliverySpeed}\nGarantie: ${guaranteeInfo}\n\nMerci de m'aider.`
+    : `مرحباً،\nأود طلب الآتي:\n\nالمنصة: ${platformName}\nالخدمة: ${fullServiceName}\nالكمية: ${quantity}\nالسعر الإجمالي: ${displayedPrice} ${currencyLabel}\nالتوصيل: ${deliverySpeed}\nالضمان: ${guaranteeInfo}\n\nالرجاء المساعدة.`;
     
   const whatsappUrl = `https://wa.me/212656268002?text=${encodeURIComponent(whatsappMessage)}`;
 
@@ -275,10 +294,27 @@ export function PricingDashboard({ pricingData: dynamicPricing }: PricingDashboa
                     <div className="flex items-end justify-between border-b border-white/5 pb-6">
                       <div>
                         <p className="text-text-muted text-sm mb-1">{t("pricing.totalPrice")}</p>
-                        <p className="text-3xl sm:text-5xl font-black text-white font-mono tracking-tight">{finalPrice} <span className="text-lg sm:text-2xl text-text-muted">MAD</span></p>
+                        <p className="text-3xl sm:text-5xl font-black text-white font-mono tracking-tight">{displayedPrice} <span className="text-lg sm:text-2xl text-text-muted">{currency === "MAD" ? "MAD" : curCfg.symbol}</span></p>
                       </div>
-                      <div className="text-end">
+                      <div className="text-end space-y-2">
                         <Badge className={cn("mb-2", currentConfig.bg, currentConfig.text)}>{t("pricing.activeProfiles")}</Badge>
+                        {/* Currency Toggle */}
+                        <div className="flex items-center gap-1 bg-white/5 rounded-lg p-1">
+                          {(Object.entries(currencyConfig) as [Currency, { symbol: string; flag: string; rate: number }][]).map(([key, cfg]) => (
+                            <button
+                              key={key}
+                              onClick={() => setCurrency(key)}
+                              className={cn(
+                                "px-2.5 py-1 rounded-md text-xs font-medium transition-all duration-200",
+                                currency === key
+                                  ? "bg-primary text-white shadow"
+                                  : "text-text-muted hover:text-white"
+                              )}
+                            >
+                              {cfg.flag} {key}
+                            </button>
+                          ))}
+                        </div>
                       </div>
                     </div>
 

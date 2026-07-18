@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect, useMemo, useCallback } from "react";
 import { en } from "@/locales/en";
 import { fr } from "@/locales/fr";
 import { ar } from "@/locales/ar";
@@ -23,10 +23,8 @@ const dictionaries = {
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en");
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const saved = localStorage.getItem("language") as Language;
     if (saved && ["en", "fr", "ar"].includes(saved)) {
       setLanguageState(saved);
@@ -43,12 +41,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, [language]);
 
-  const setLanguage = (lang: Language) => {
+  const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem("language", lang);
-  };
+  }, []);
 
-  const t = (key: string): string => {
+  const t = useCallback((key: string): string => {
     const keys = key.split(".");
     let value: any = dictionaries[language];
     
@@ -56,19 +54,17 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       if (value && typeof value === "object") {
         value = value[k];
       } else {
-        return key; // fallback to key if not found
+        return key;
       }
     }
     
     return typeof value === "string" ? value : key;
-  };
+  }, [language]);
 
-  // To avoid hydration mismatch for language dependent stuff, we could render a loader or just render with default 'en'.
-  // However, returning children without the Provider causes the useLanguage hook to throw!
-  // We MUST always wrap children in the Provider.
-  // We return children directly to avoid breaking Flexbox layouts.
+  const contextValue = useMemo(() => ({ language, setLanguage, t }), [language, setLanguage, t]);
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={contextValue}>
       {children}
     </LanguageContext.Provider>
   );

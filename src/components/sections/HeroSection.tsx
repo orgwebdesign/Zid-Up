@@ -98,10 +98,12 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-[160px] animate-pulse" style={{ animationDuration: '4s' }} />
             
             <Image 
-              src="/image/ChatGPT Image Jun 13, 2026, 09_39_23 PM.png" 
+              src="/image/hero.webp" 
               alt="ZID UP AI Wizard" 
               width={600}
               height={600}
+              sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 600px"
+              priority
               className="w-full h-auto relative z-10 drop-shadow-[0_0_60px_rgba(124,58,237,0.5)]"
               style={{
                 maskImage: 'radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 48%, rgba(0,0,0,0) 78%)',

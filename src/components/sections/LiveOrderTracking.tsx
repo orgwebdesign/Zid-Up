@@ -86,16 +86,41 @@ export function LiveOrderTracking() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setOrders((prev) =>
-        prev.map((o, idx) => {
-          if (o.status === "received") return { ...o, status: "processing" as OrderStatus };
-          if (o.status === "processing") return { ...o, status: "delivered" as OrderStatus };
-          return { ...randomOrder(idx + Date.now()), status: "received" as OrderStatus };
-        })
-      );
-    }, 5000);
-    return () => clearInterval(timer);
+    const el = sectionRef.current;
+    if (!el) return;
+
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (!timer) {
+            timer = setInterval(() => {
+              setOrders((prev) =>
+                prev.map((o, idx) => {
+                  if (o.status === "received") return { ...o, status: "processing" as OrderStatus };
+                  if (o.status === "processing") return { ...o, status: "delivered" as OrderStatus };
+                  return { ...randomOrder(idx + Date.now()), status: "received" as OrderStatus };
+                })
+              );
+            }, 5000);
+          }
+        } else {
+          if (timer) {
+            clearInterval(timer);
+            timer = null;
+          }
+        }
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(el);
+
+    return () => {
+      observer.disconnect();
+      if (timer) clearInterval(timer);
+    };
   }, []);
 
   useEffect(() => {
@@ -103,18 +128,20 @@ export function LiveOrderTracking() {
     const el = sectionRef.current;
     if (!el) return;
 
-    gsap.fromTo(
+    const st = gsap.fromTo(
       el.querySelectorAll(".tracking-row"),
       { opacity: 0, y: 30 },
       {
         opacity: 1, y: 0,
         duration: 1, stagger: 0.15,
         ease: "power3.out",
-        scrollTrigger: { trigger: el, start: "top 80%" },
+        scrollTrigger: { trigger: el, start: "top 80%", once: true },
       }
     );
 
-    return () => ScrollTrigger.getAll().forEach((s) => s.kill());
+    return () => {
+      if (st.scrollTrigger) st.scrollTrigger.kill();
+    };
   }, []);
 
   return (

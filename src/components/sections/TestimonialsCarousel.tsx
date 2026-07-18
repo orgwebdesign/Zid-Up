@@ -155,7 +155,9 @@ export function TestimonialsCarousel() {
     const el = sectionRef.current;
     if (!el) return;
 
-    gsap.fromTo(
+    const triggers: ScrollTrigger[] = [];
+
+    const st1 = gsap.fromTo(
       el.querySelector(".testimonial-card"),
       { opacity: 0, y: 50, scale: 0.95 },
       {
@@ -165,11 +167,13 @@ export function TestimonialsCarousel() {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
+          once: true,
         },
       }
     );
+    if (st1.scrollTrigger) triggers.push(st1.scrollTrigger);
 
-    gsap.fromTo(
+    const st2 = gsap.fromTo(
       el.querySelectorAll(".testimonial-title, .testimonial-subtitle"),
       { opacity: 0, y: 30 },
       {
@@ -180,12 +184,14 @@ export function TestimonialsCarousel() {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
+          once: true,
         },
       }
     );
+    if (st2.scrollTrigger) triggers.push(st2.scrollTrigger);
 
     return () => {
-      ScrollTrigger.getAll().forEach((st) => st.kill());
+      triggers.forEach((st) => st.kill());
     };
   }, []);
 

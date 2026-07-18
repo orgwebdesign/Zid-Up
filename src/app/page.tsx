@@ -2,21 +2,19 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { PlatformStrip } from "@/components/sections/PlatformStrip";
-import { WelcomeStory } from "@/components/sections/WelcomeStory";
-import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
-import { LiveOrderTracking } from "@/components/sections/LiveOrderTracking";
-import { Features } from "@/components/sections/Features";
-import { WhatsAppCTA } from "@/components/sections/WhatsAppCTA";
-import { Statistics } from "@/components/sections/Statistics";
-import { PricingDashboard } from "@/components/sections/PricingDashboard";
-import { LiveSocialProof } from "@/components/sections/LiveSocialProof";
-import { ServicesPreview } from "@/components/sections/ServicesPreview";
-import { FAQ } from "@/components/sections/FAQ";
-import { BlogPreview } from "@/components/sections/BlogPreview";
+import dynamic from "next/dynamic";
 import fs from "fs";
 import path from "path";
 
-export const dynamic = "force-dynamic";
+const PricingDashboard = dynamic(() => import("@/components/sections/PricingDashboard").then(m => ({ default: m.PricingDashboard })));
+const LiveSocialProof = dynamic(() => import("@/components/sections/LiveSocialProof").then(m => ({ default: m.LiveSocialProof })));
+const Features = dynamic(() => import("@/components/sections/Features").then(m => ({ default: m.Features })));
+const TestimonialsCarousel = dynamic(() => import("@/components/sections/TestimonialsCarousel").then(m => ({ default: m.TestimonialsCarousel })));
+const LiveOrderTracking = dynamic(() => import("@/components/sections/LiveOrderTracking").then(m => ({ default: m.LiveOrderTracking })));
+const Statistics = dynamic(() => import("@/components/sections/Statistics").then(m => ({ default: m.Statistics })));
+const ServicesPreview = dynamic(() => import("@/components/sections/ServicesPreview").then(m => ({ default: m.ServicesPreview })));
+const FAQ = dynamic(() => import("@/components/sections/FAQ").then(m => ({ default: m.FAQ })));
+const BlogPreview = dynamic(() => import("@/components/sections/BlogPreview").then(m => ({ default: m.BlogPreview })));
 
 function getPricing() {
   try {

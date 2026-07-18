@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
+});
 
 export const metadata: Metadata = {
   title: "ZID UP — Smart SMM Panel for Followers, Likes & Views",
@@ -28,12 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased dark scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-      </head>
-      <body className="min-h-screen bg-[var(--background)] text-[var(--text-main)] selection:bg-primary/30 selection:text-white flex flex-col" suppressHydrationWarning>
+      <body className={`${inter.variable} ${plusJakartaSans.variable} min-h-screen bg-[var(--background)] text-[var(--text-main)] selection:bg-primary/30 selection:text-white flex flex-col`} suppressHydrationWarning>
         <LanguageProvider>
           {children}
         </LanguageProvider>

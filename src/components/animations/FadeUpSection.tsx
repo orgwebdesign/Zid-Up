@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+let registered = false;
+
 export function FadeUpSection({
   children,
   className,
@@ -14,28 +16,25 @@ export function FadeUpSection({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    if (!registered) {
+      gsap.registerPlugin(ScrollTrigger);
+      registered = true;
+    }
     const el = ref.current;
     if (!el) return;
 
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.9,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-          },
-        }
-      );
-    }, el);
+    gsap.set(el, { opacity: 0, y: 50 });
 
-    return () => ctx.revert();
+    const trigger = ScrollTrigger.create({
+      trigger: el,
+      start: "top 90%",
+      once: true,
+      onEnter: () => {
+        gsap.to(el, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" });
+      },
+    });
+
+    return () => trigger.kill();
   }, []);
 
   return (
