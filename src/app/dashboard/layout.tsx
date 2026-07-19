@@ -30,7 +30,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     <>
       <Link href="/" className="flex items-center gap-2 px-2 py-4 mb-4">
         <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center font-bold text-white text-sm">Z</div>
-        <span className="font-heading font-bold text-lg text-white">ZID UP</span>
+        <span className="font-heading font-bold text-lg text-white">BoostVib Growt</span>
       </Link>
       
       <nav className="flex flex-col gap-1 flex-1">

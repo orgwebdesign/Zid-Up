@@ -18,7 +18,7 @@ export function Footer() {
             <Link href="/" className="flex items-center group mb-6">
               <Image 
                 src="/image/logo v2.svg" 
-                alt="ZID UP Logo" 
+                alt="BoostVib Growt Logo" 
                 width={120}
                 height={48}
                 className="h-12 w-auto object-contain group-hover:scale-105 transition-transform origin-left"
@@ -85,7 +85,7 @@ export function Footer() {
             {t("footer.disclaimer")}
           </p>
           <p className="text-text-muted text-sm">
-            © {new Date().getFullYear()} ZID UP. {t("footer.copyright")}
+            © {new Date().getFullYear()} BoostVib Growt. {t("footer.copyright")}
           </p>
         </div>
       </div>

@@ -6,7 +6,7 @@ import fs from "fs";
 import path from "path";
 
 export const metadata: Metadata = {
-  title: "SMM Services — ZID UP",
+  title: "SMM Services — BoostVib Growt",
   description: "Browse thousands of SMM services across Instagram, TikTok, YouTube, Facebook and more. Real followers, likes, views and engagement at competitive prices.",
 };
 

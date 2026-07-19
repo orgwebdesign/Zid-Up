@@ -14,14 +14,14 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-bold text-white font-heading mb-4">1. Acceptance of Terms</h2>
               <p className="text-text-soft leading-relaxed">
-                By accessing or using ZID UP, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.
+                By accessing or using BoostVib Growt, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-white font-heading mb-4">2. Services Description</h2>
               <p className="text-text-soft leading-relaxed">
-                ZID UP provides social media marketing services including but not limited to followers, likes, views, subscribers, and comments for various social media platforms. We act as a reseller panel and source services from third-party providers.
+                BoostVib Growt provides social media marketing services including but not limited to followers, likes, views, subscribers, and comments for various social media platforms. We act as a reseller panel and source services from third-party providers.
               </p>
             </section>
 
@@ -42,7 +42,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-bold text-white font-heading mb-4">5. Limitation of Liability</h2>
               <p className="text-text-soft leading-relaxed">
-                ZID UP is not liable for any indirect, incidental, or consequential damages arising from the use of our services. We do not guarantee that services will meet specific expectations or that they comply with third-party platform policies.
+                BoostVib Growt is not liable for any indirect, incidental, or consequential damages arising from the use of our services. We do not guarantee that services will meet specific expectations or that they comply with third-party platform policies.
               </p>
             </section>
 

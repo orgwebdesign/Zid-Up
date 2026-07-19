@@ -223,7 +223,7 @@ export default function AdminDashboard() {
                 src="/image/logo v2.svg" 
                 width={160}
                 height={40}
-                alt="ZID UP Logo" 
+                alt="BoostVib Growt Logo" 
                 priority
                 className="h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
               />
@@ -388,7 +388,7 @@ export default function AdminDashboard() {
                       <th className="px-6 py-5 font-semibold text-text-muted text-sm min-w-[200px]">Service Details</th>
                       <th className="px-6 py-5 font-semibold text-text-muted text-sm min-w-[130px]">Base Qty</th>
                       <th className="px-6 py-5 font-semibold text-text-muted text-sm min-w-[150px]">Peakerr Cost <span className="font-normal text-xs opacity-70">(Your Buy)</span></th>
-                      <th className="px-6 py-5 font-semibold text-text-muted text-sm min-w-[150px]">ZID UP Price <span className="font-normal text-xs opacity-70">(Your Sell)</span></th>
+                      <th className="px-6 py-5 font-semibold text-text-muted text-sm min-w-[150px]">BoostVib Growt Price <span className="font-normal text-xs opacity-70">(Your Sell)</span></th>
                       <th className="px-6 py-5 font-semibold text-text-muted text-sm min-w-[140px]">Guarantee</th>
                       <th className="px-6 py-5 font-semibold text-text-muted text-sm text-right min-w-[160px]">Net Profit & Margin</th>
                       <th className="px-2 py-5 w-10"></th>

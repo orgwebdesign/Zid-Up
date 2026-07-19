@@ -21,7 +21,7 @@ const testimonials = [
     city: "Rabat",
     rating: 5,
     service: "10000 Views TikTok",
-    message: "Excellent service ! Les vues TikTok sont arrivées super rapidement. Mon video a explosé grâce à ZID UP. Je vais commander encore plus la semaine prochaine.",
+    message: "Excellent service ! Les vues TikTok sont arrivées super rapidement. Mon video a explosé grâce à BoostVib Growt. Je vais commander encore plus la semaine prochaine.",
     date: "8 Juin 2026",
   },
   {
@@ -29,7 +29,7 @@ const testimonials = [
     city: "Marrakech",
     rating: 5,
     service: "1000 Subscribers YouTube",
-    message: "Je cherchais un panel fiable pour des abonnés YouTube. ZID UP m'a livré 1000 subscribers de haute qualité en 2 jours. Le support est très professionnel.",
+    message: "Je cherchais un panel fiable pour des abonnés YouTube. BoostVib Growt m'a livré 1000 subscribers de haute qualité en 2 jours. Le support est très professionnel.",
     date: "5 Juin 2026",
   },
   {
@@ -45,7 +45,7 @@ const testimonials = [
     city: "Tanger",
     rating: 5,
     service: "1500 Followers TikTok",
-    message: "Best SMM panel I've used! The followers are high quality and delivery was instant. I've been using ZID UP for 3 months now and never been disappointed.",
+    message: "Best SMM panel I've used! The followers are high quality and delivery was instant. I've been using BoostVib Growt for 3 months now and never been disappointed.",
     date: "28 Mai 2026",
   },
   {
@@ -53,7 +53,7 @@ const testimonials = [
     city: "Agadir",
     rating: 5,
     service: "5000 Views Instagram",
-    message: "Service rapide et efficace. J'ai commandé des vues pour mes reels Instagram et le résultat était immédiat. Mon compte a gagné en visibilité grâce à ZID UP.",
+    message: "Service rapide et efficace. J'ai commandé des vues pour mes reels Instagram et le résultat était immédiat. Mon compte a gagné en visibilité grâce à BoostVib Growt.",
     date: "20 Mai 2026",
   },
 ];
@@ -76,7 +76,7 @@ function getPlatformName(service: string) {
   for (const platform of Object.keys(platformColors)) {
     if (service.includes(platform)) return platform;
   }
-  return "ZID UP";
+  return "BoostVib Growt";
 }
 
 export function TestimonialsCarousel() {
@@ -221,7 +221,7 @@ export function TestimonialsCarousel() {
                   Z
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-white font-semibold text-sm">ZID UP Support</p>
+                  <p className="text-white font-semibold text-sm">BoostVib Growt Support</p>
                   <p className="text-white/70 text-xs">online</p>
                 </div>
                 <Quote size={20} className="text-white/60" />

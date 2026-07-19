@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Eye, Heart, MessageCircle, Zap, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Telegram Services — ZID UP",
+  title: "Telegram Services — BoostVib Growt",
   description: "Buy Telegram channel members, post views, and reactions. Real members at competitive prices.",
 };
 

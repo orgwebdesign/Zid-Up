@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { PricingDashboard } from "@/components/sections/PricingDashboard";
 
 export const metadata: Metadata = {
-  title: "Pricing — ZID UP",
+  title: "Pricing — BoostVib Growt",
   description: "Transparent pricing for all SMM services. Competitive rates for followers, likes, views and subscribers across all major platforms.",
 };
 import fs from "fs";

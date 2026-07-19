@@ -35,7 +35,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center group">
             <Image 
               src="/image/logo v2.svg" 
-              alt="ZID UP Logo" 
+              alt="BoostVib Growt Logo" 
               width={160}
               height={64}
               className="h-12 md:h-16 w-auto object-contain group-hover:scale-[1.03] transition-transform origin-start"

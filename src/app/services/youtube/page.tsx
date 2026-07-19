@@ -10,7 +10,7 @@ import fs from "fs";
 import path from "path";
 
 export const metadata: Metadata = {
-  title: "YouTube Services — ZID UP",
+  title: "YouTube Services — BoostVib Growt",
   description: "Buy YouTube subscribers, likes, views, and comments. High-retention engagement at competitive prices.",
 };
 

@@ -31,7 +31,7 @@ export function BottomLoginCTA() {
             
             <div className="mb-6 text-center relative z-10">
               <h3 className="text-2xl font-bold text-white mb-2 font-heading">Sign In</h3>
-              <p className="text-text-muted text-sm">Welcome back to ZID UP</p>
+              <p className="text-text-muted text-sm">Welcome back to BoostVib Growt</p>
             </div>
 
             <form className="flex flex-col gap-4 relative z-10">

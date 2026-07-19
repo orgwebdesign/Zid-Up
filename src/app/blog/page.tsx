@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 
 export const metadata: Metadata = {
-  title: "Blog — ZID UP",
+  title: "Blog — BoostVib Growt",
   description: "Tips, guides and strategies to maximize your social media growth. Learn how to get more followers, increase engagement, and build a profitable SMM reseller business.",
 };
 

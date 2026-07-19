@@ -11,7 +11,7 @@ export default function FAQPage() {
           <div className="container-custom text-center">
             <h1 className="text-h1 font-heading font-extrabold text-white mb-6">Frequently Asked Questions</h1>
             <p className="text-text-soft text-lg max-w-2xl mx-auto">
-              Everything you need to know about ZID UP.
+              Everything you need to know about BoostVib Growt.
             </p>
           </div>
         </section>

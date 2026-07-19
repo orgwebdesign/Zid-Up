@@ -10,7 +10,7 @@ import fs from "fs";
 import path from "path";
 
 export const metadata: Metadata = {
-  title: "Instagram Services — ZID UP",
+  title: "Instagram Services — BoostVib Growt",
   description: "Buy Instagram followers, likes, views, and comments. Real engagement at competitive prices.",
 };
 

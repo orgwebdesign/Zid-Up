@@ -4,8 +4,8 @@ import { Footer } from "@/components/layout/Footer";
 import { FadeUpSection } from "@/components/animations/FadeUpSection";
 
 export const metadata: Metadata = {
-  title: "API Documentation — ZID UP",
-  description: "Integrate ZID UP services directly into your platform. REST API for automated ordering, webhook notifications, and SDK examples.",
+  title: "API Documentation — BoostVib Growt",
+  description: "Integrate BoostVib Growt services directly into your platform. REST API for automated ordering, webhook notifications, and SDK examples.",
 };
 import { Card } from "@/components/ui/Card";
 import { Code, Key, Zap, Server } from "lucide-react";
@@ -21,7 +21,7 @@ export default function ApiDocsPage() {
             <FadeUpSection className="text-center mb-16">
               <h1 className="text-h1 font-heading font-extrabold text-white mb-6">API Documentation</h1>
               <p className="text-text-soft text-lg max-w-2xl mx-auto">
-                Integrate ZID UP services directly into your platform.
+                Integrate BoostVib Growt services directly into your platform.
               </p>
             </FadeUpSection>
 

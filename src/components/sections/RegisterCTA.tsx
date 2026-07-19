@@ -17,7 +17,7 @@ export function RegisterCTA() {
                 Register today and start growing smarter.
               </h2>
               <p className="text-body-lg text-text-soft mb-10 max-w-2xl mx-auto">
-                Create your free account, add funds, choose your service and track every order from one powerful dashboard. Join thousands of users scaling their social media presence with ZID UP.
+                Create your free account, add funds, choose your service and track every order from one powerful dashboard. Join thousands of users scaling their social media presence with BoostVib Growt.
               </p>
               <Link href="/register">
                 <Button size="lg" className="px-8 md:px-12 py-3 md:py-4 h-auto md:h-16 text-base md:text-lg">

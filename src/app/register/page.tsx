@@ -7,8 +7,8 @@ import Link from "next/link";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Create Account — ZID UP",
-  description: "Create your free ZID UP account and start growing your social media presence. Instant access to 2,800+ services with wholesale pricing.",
+  title: "Create Account — BoostVib Growt",
+  description: "Create your free BoostVib Growt account and start growing your social media presence. Instant access to 2,800+ services with wholesale pricing.",
 };
 
 export default function RegisterPage() {
@@ -27,7 +27,7 @@ export default function RegisterPage() {
             {/* Left side benefits */}
             <div className="hidden lg:block">
               <h1 className="text-4xl font-bold text-white font-heading mb-6">Create your free account today</h1>
-              <p className="text-text-soft text-lg mb-8">Join thousands of users who trust ZID UP to grow their social media presence.</p>
+              <p className="text-text-soft text-lg mb-8">Join thousands of users who trust BoostVib Growt to grow their social media presence.</p>
               
               <ul className="space-y-4">
                 {[

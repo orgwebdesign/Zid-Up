@@ -42,7 +42,7 @@ export function LoginForm() {
             Z
           </div>
           <h1 className="text-2xl font-bold text-white font-heading">Welcome Back</h1>
-          <p className="text-text-muted text-sm mt-2">Sign in to your ZID UP dashboard</p>
+          <p className="text-text-muted text-sm mt-2">Sign in to your BoostVib Growt dashboard</p>
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">

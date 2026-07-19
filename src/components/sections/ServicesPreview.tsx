@@ -82,7 +82,7 @@ export function ServicesPreview({ pricingData }: { pricingData?: PricingData | n
             Affordable SMM Panel Services
           </h2>
           <p className="text-text-soft text-lg">
-            Choose from thousands of affordable SMM services. Whether you are growing your own account or reselling to clients, ZID UP gives you the tools to move faster.
+            Choose from thousands of affordable SMM services. Whether you are growing your own account or reselling to clients, BoostVib Growt gives you the tools to move faster.
           </p>
         </FadeUpSection>
 

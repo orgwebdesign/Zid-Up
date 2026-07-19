@@ -28,8 +28,8 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "ZID UP — Smart SMM Panel for Followers, Likes & Views",
-  description: "ZID UP is a modern SMM panel for creators, agencies and resellers. Order social media followers, likes, views, comments and subscribers with fast delivery and real-time tracking.",
+  title: "BoostVib Growt — Smart SMM Panel for Followers, Likes & Views",
+  description: "BoostVib Growt is a modern SMM panel for creators, agencies and resellers. Order social media followers, likes, views, comments and subscribers with fast delivery and real-time tracking.",
   keywords: [
     "SMM panel",
     "SMM reseller panel",

@@ -10,7 +10,7 @@ import fs from "fs";
 import path from "path";
 
 export const metadata: Metadata = {
-  title: "TikTok Services — ZID UP",
+  title: "TikTok Services — BoostVib Growt",
   description: "Buy TikTok followers, likes, views, and comments. Real engagement at competitive prices.",
 };
 

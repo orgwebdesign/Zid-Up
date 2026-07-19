@@ -5,8 +5,8 @@ import { Footer } from "@/components/layout/Footer";
 import { LoginForm } from "./LoginForm";
 
 export const metadata: Metadata = {
-  title: "Sign In — ZID UP Dashboard",
-  description: "Sign in to your ZID UP dashboard to manage orders, track progress, and grow your social media presence.",
+  title: "Sign In — BoostVib Growt Dashboard",
+  description: "Sign in to your BoostVib Growt dashboard to manage orders, track progress, and grow your social media presence.",
 };
 
 export default function LoginPage() {
