@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "Facebook followers"
   ],
   icons: {
-    icon: "/image/logo v2.svg",
+    icon: "/image/logo boostvib.svg",
   }
 };
 

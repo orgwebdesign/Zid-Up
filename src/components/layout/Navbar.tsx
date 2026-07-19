@@ -34,7 +34,7 @@ export function Navbar() {
         {/* Logo */}
           <Link href="/" className="flex items-center group">
             <Image 
-              src="/image/logo v2.svg" 
+              src="/image/logo boostvib.svg" 
               alt="BoostVib Growt Logo" 
               width={160}
               height={64}

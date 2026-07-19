@@ -220,7 +220,7 @@ export default function AdminDashboard() {
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-4 group">
               <Image 
-                src="/image/logo v2.svg" 
+                src="/image/logo boostvib.svg" 
                 width={160}
                 height={40}
                 alt="BoostVib Growt Logo" 

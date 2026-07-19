@@ -17,7 +17,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center group mb-6">
               <Image 
-                src="/image/logo v2.svg" 
+                src="/image/logo boostvib.svg" 
                 alt="BoostVib Growt Logo" 
                 width={120}
                 height={48}
